@@ -1,0 +1,7 @@
+data/
+.claude/
+catboost_info/
+*.log
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
