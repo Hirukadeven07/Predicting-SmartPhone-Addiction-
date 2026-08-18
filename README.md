@@ -6,6 +6,11 @@ person is addicted to their smartphone from a set of behavioral and usage featur
 **Competition:** [playground-series-s6e8](https://www.kaggle.com/competitions/playground-series-s6e8)
 **Metric:** ROC-AUC
 
+## EDA
+
+`notebooks/eda.ipynb` covers missingness patterns, target balance, feature distributions by
+class, and correlations — the findings that motivated the feature engineering below.
+
 ## Approach
 
 The dataset contains ~700K training rows with 12 features (screen time, social media/gaming
