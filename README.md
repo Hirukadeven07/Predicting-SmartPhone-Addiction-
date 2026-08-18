@@ -42,7 +42,7 @@ missingness (5-20% per column). The pipeline:
 ## Usage
 
 ```bash
-pip install pandas numpy scikit-learn lightgbm xgboost catboost matplotlib seaborn plotly
+pip install pandas numpy scikit-learn lightgbm xgboost catboost matplotlib seaborn plotly kaleido
 
 python scripts/train_lgbm.py       # single LightGBM baseline
 python scripts/train_ensemble.py   # LightGBM + XGBoost stacked ensemble
