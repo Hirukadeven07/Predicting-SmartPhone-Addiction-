@@ -9,7 +9,13 @@ person is addicted to their smartphone from a set of behavioral and usage featur
 ## EDA
 
 `notebooks/eda.ipynb` covers missingness patterns, target balance, feature distributions by
-class, and correlations — the findings that motivated the feature engineering below.
+class, and correlations (matplotlib/seaborn) — the findings that motivated the feature
+engineering below.
+
+`notebooks/eda_plotly.ipynb` is a companion notebook with interactive Plotly versions of the
+same key visuals (hover tooltips, a feature-picker dropdown, a brushable parallel-coordinates
+view), kept separate so the static notebook doesn't get weighed down by the larger Plotly
+outputs.
 
 ## Approach
 
@@ -36,7 +42,7 @@ missingness (5-20% per column). The pipeline:
 ## Usage
 
 ```bash
-pip install pandas numpy scikit-learn lightgbm xgboost catboost
+pip install pandas numpy scikit-learn lightgbm xgboost catboost matplotlib seaborn plotly
 
 python scripts/train_lgbm.py       # single LightGBM baseline
 python scripts/train_ensemble.py   # LightGBM + XGBoost stacked ensemble
