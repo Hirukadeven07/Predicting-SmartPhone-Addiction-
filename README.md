@@ -17,6 +17,18 @@ same key visuals (hover tooltips, a feature-picker dropdown, a brushable paralle
 view), kept separate so the static notebook doesn't get weighed down by the larger Plotly
 outputs.
 
+## Model training notebook
+
+`notebooks/model_training.ipynb` walks through the full modeling pipeline behind
+`scripts/train_ensemble.py` step by step and cell by cell: loading the data, an illustrative
+train/validation hold-out split followed by the 5-fold stratified CV actually used, each block
+of feature engineering applied and previewed individually, categorical encoding, per-fold
+LightGBM/XGBoost training, OOF evaluation, logistic-regression stacking, feature importance,
+and writing the final submission. Same hyperparameters and random seed as the script, so its
+OOF AUCs match the results table below (small differences are normal — LightGBM/XGBoost are
+multi-threaded and not bit-for-bit deterministic). Training all 10 fold/model fits takes
+roughly 30 minutes on a typical laptop CPU.
+
 ## Approach
 
 The dataset contains ~700K training rows with 12 features (screen time, social media/gaming
